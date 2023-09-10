@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "c1560f18-9509-42c4-98e8-44b80eee0574",
+		"name": "TechTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4529345"
+	},
+	"item": [
+		{
+			"name": "pushdata",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"dataHeader\":{\"name\":\"TSLA-USDGBP-11Y\",\"blockType\":\"BLOCKTYPEA\"},\"dataBody\":{\"dataBody\":\"AKCp5fU4WNWKBVvhXsbNwdd\"},\"checksum\":\"f7c1d6db0e8172ca11609517c4b435d4\"}"
+				},
+				"url": {
+					"raw": "http://localhost:8090/dataserver/pushdata",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"dataserver",
+						"pushdata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getdata",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8090/dataserver/data/blocktypeb",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"dataserver",
+						"data",
+						"blocktypeb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patchdata",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
